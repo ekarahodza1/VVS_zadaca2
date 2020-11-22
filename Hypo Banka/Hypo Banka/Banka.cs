@@ -75,7 +75,21 @@ namespace Hypo_Banka
         /// </summary>
         public List<Klijent> KlijentiSBlokiranimRačunima()
         {
-            throw new NotImplementedException();
+            List<Klijent> rezultat = null;
+            foreach (Klijent k in klijenti)
+            {
+                List<Racun> racuni = k.Racuni;
+                foreach (Racun r in racuni)
+                {
+                    try
+                    {
+                        if (r.StanjeRacuna < 0) r.Blokiran = true;
+                    } catch (ArgumentException) { }
+                }
+                if (racuni.Find(blokirani => blokirani.Blokiran.Equals(true)) != null) rezultat.Add(k);
+            }
+            if (rezultat == null) throw new Exception("Nema klijenata sa blokiranim računima");
+            return rezultat;
         }
 
         public void DajKredit(Kredit kredit)
