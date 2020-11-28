@@ -33,25 +33,25 @@ namespace Unit_Testovi
         {
             //banka sa jednim klijentom ciji je racun blokiran
             Banka banka = new Banka();
-            Klijent k1 = new Klijent("Dzeneta", "Kudumovic", "dkudumovic1", "123456789123456789P?", new DateTime(1998, 08, 19), "123D456");
-            Racun r1 = new Racun(100);
+            Klijent klijent1 = new Klijent("Dzeneta", "Kudumovic", "dkudumovic1", "123456789123456789P?", new DateTime(1998, 08, 19), "123D456");
+            Racun racun1 = new Racun(100);
             //Ovdje greska - kako blokirati racun
-            Racun r2 = new Racun(0.0);
-            r2.Blokiran = true;
-            k1.Racuni.Add(r1);
-            k1.Racuni.Add(r2);
+            Racun racun2 = new Racun(0.0);
+            racun2.Blokiran = true;
+            klijent1.Racuni.Add(racun1);
+            klijent1.Racuni.Add(racun2);
 
-            Klijent k2 = new Klijent("Neko", "Nekic", "nnekic1", "123456789123456789L!", new DateTime(1995, 01, 01), "789L123");
-            Racun r3 = new Racun(100);
-            Racun r4 = new Racun(2000);
+            Klijent klijent2 = new Klijent("Neko", "Nekic", "nnekic1", "123456789123456789L!", new DateTime(1995, 01, 01), "789L123");
+            Racun racun3 = new Racun(100);
+            Racun racun4 = new Racun(2000);
             
-            k2.Racuni.Add(r3);
-            k2.Racuni.Add(r4);
+            klijent2.Racuni.Add(racun3);
+            klijent2.Racuni.Add(racun4);
 
-            banka.Klijenti.Add(k1);
-            banka.Klijenti.Add(k2);
+            banka.Klijenti.Add(klijent1);
+            banka.Klijenti.Add(klijent2);
             List<Klijent> ocekivanaLista = new List<Klijent>();
-            ocekivanaLista.Add(k1);
+            ocekivanaLista.Add(klijent1);
             CollectionAssert.AreEqual(ocekivanaLista, banka.KlijentiSBlokiranimRačunima());
         }
 
@@ -62,21 +62,21 @@ namespace Unit_Testovi
         {
             //banka bez klijenata sa blokiranim racunima
             Banka banka = new Banka();
-            Klijent k1 = new Klijent("Dzeneta", "Kudumovic", "dkudumovic1", "123456789123456789P?", new DateTime(1998, 08, 19), "123D456");
-            Racun r1 = new Racun(100);
-            Racun r2 = new Racun(20);
-            k1.Racuni.Add(r1);
-            k1.Racuni.Add(r2);
+            Klijent klijent1 = new Klijent("Dzeneta", "Kudumovic", "dkudumovic1", "123456789123456789P?", new DateTime(1998, 08, 19), "123D456");
+            Racun racun1 = new Racun(100);
+            Racun racun2 = new Racun(20);
+            klijent1.Racuni.Add(racun1);
+            klijent1.Racuni.Add(racun2);
 
-            Klijent k2 = new Klijent("Neko", "Nekic", "nnekic1", "123456789123456789L!", new DateTime(1995, 01, 01), "789L123");
-            Racun r3 = new Racun(100);
-            Racun r4 = new Racun(2000);
+            Klijent klijent2 = new Klijent("Neko", "Nekic", "nnekic1", "123456789123456789L!", new DateTime(1995, 01, 01), "789L123");
+            Racun racun3 = new Racun(100);
+            Racun racun4 = new Racun(2000);
 
-            k2.Racuni.Add(r3);
-            k2.Racuni.Add(r4);
+            klijent2.Racuni.Add(racun3);
+            klijent2.Racuni.Add(racun4);
 
-            banka.Klijenti.Add(k1);
-            banka.Klijenti.Add(k2);
+            banka.Klijenti.Add(klijent1);
+            banka.Klijenti.Add(klijent2);
             banka.KlijentiSBlokiranimRačunima();
         }
 
@@ -97,10 +97,10 @@ namespace Unit_Testovi
         {
             //klijenti bez racuna
             Banka banka = new Banka();
-            Klijent k1 = new Klijent("Dzeneta", "Kudumovic", "dkudumovic1", "123456789123456789P?", new DateTime(1998, 08, 19), "123D456");
-            Klijent k2 = new Klijent("Neko", "Nekic", "nnekic1", "123456789123456789L!", new DateTime(1995, 01, 01), "789L123");
-            banka.Klijenti.Add(k1);
-            banka.Klijenti.Add(k2);
+            Klijent klijent1 = new Klijent("Dzeneta", "Kudumovic", "dkudumovic1", "123456789123456789P?", new DateTime(1998, 08, 19), "123D456");
+            Klijent klijent2 = new Klijent("Neko", "Nekic", "nnekic1", "123456789123456789L!", new DateTime(1995, 01, 01), "789L123");
+            banka.Klijenti.Add(klijent1);
+            banka.Klijenti.Add(klijent2);
             banka.KlijentiSBlokiranimRačunima();
         }
 

@@ -15,5 +15,4 @@ namespace Unit_Testovi
             Assert.AreEqual("Kredit koji se treba vratiti najkasnije na dan 12.12.2020. godine " +
                 "ima preostali iznos od 10000KM. Iznos rate je 150KM, po stopi od 5%.", kredit.ProvjeriStanjeOtplate());
         }
-    }
 }
