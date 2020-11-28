@@ -77,6 +77,8 @@ namespace Hypo_Banka
         /// slučaju da su svi njegovi računi blokirani.
         /// </summary>
         /// <param name="r"></param>
+        
+        //Dzeneta
         public double DajUkupanIznosNovcaNaSvimRačunima()
         {
             if (racuni.Count == 0 || racuni==null) throw new InvalidOperationException("Klijent nema nijedan račun!");
