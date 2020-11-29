@@ -72,10 +72,12 @@ namespace Hypo_Banka
         /// Prvenstveno je potrebno blokirati sve račune koji ispunjavaju uslove za to
         /// prema postojećoj programskoj logici.
         /// Ukoliko nema nijedan klijent s blokiranim računom, baca se izuzetak.
-        /// </summary>
+        /// </summary> 
+        
+        /// Dženana
         public List<Klijent> KlijentiSBlokiranimRačunima()
         {
-            List<Klijent> rezultat = null;
+            List<Klijent> rezultat = new List<Klijent>();
             foreach (Klijent k in klijenti)
             {
                 List<Racun> racuni = k.Racuni;
@@ -83,12 +85,12 @@ namespace Hypo_Banka
                 {
                     try
                     {
-                        if (r.StanjeRacuna < 0) r.Blokiran = true;
+                        if (r.StanjeRacuna <= 0) r.Blokiran = true;
                     } catch (ArgumentException) { }
                 }
                 if (racuni.Find(blokirani => blokirani.Blokiran.Equals(true)) != null) rezultat.Add(k);
             }
-            if (rezultat == null) throw new Exception("Nema klijenata sa blokiranim računima");
+            if (rezultat.Count == 0) throw new Exception("Nema klijenata sa blokiranim računima");
             return rezultat;
         }
 

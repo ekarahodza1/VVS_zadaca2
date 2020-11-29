@@ -106,6 +106,8 @@ namespace Hypo_Banka
         /// Password se generiše prema dozvoljenom formatu podataka iz settera po želji.
         /// Korisničko ime i hashirani password vraćaju se kao rezultat metode.
         /// </summary>
+        
+        /// Dženana
         public Tuple<string, string> AutomatskoGenerisanjePodataka()
         {
             if (Ime == null || Prezime == null) throw new Exception("Ime ili prezime korisnika nisu postavljeni");

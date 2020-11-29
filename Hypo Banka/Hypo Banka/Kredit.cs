@@ -96,6 +96,8 @@ namespace Hypo_Banka
         /// XX %."
         /// </summary>
         /// <returns></returns>
+        
+        /// Esma
         public string ProvjeriStanjeOtplate()
 
         {

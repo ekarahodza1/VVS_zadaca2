@@ -4,11 +4,12 @@ using System;
 
 namespace Unit_Testovi
 {
-    [TestClass]
+    [TestClass()]
     public class KreditTest
     {
-        [TestMethod]
-        public void Test()
+        //Dženana
+        [TestMethod()]
+        public void ProvjeriStanjeOtplateTest()
         {
             Klijent klijent = new Klijent();
             Kredit kredit = new Kredit(klijent, 10000, 150, 0.05, DateTime.Parse("12.12.2020."));

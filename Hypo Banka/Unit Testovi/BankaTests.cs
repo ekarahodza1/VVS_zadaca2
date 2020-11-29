@@ -35,9 +35,8 @@ namespace Unit_Testovi
             Banka banka = new Banka();
             Klijent klijent1 = new Klijent("Dzeneta", "Kudumovic", "dkudumovic1", "123456789123456789P?", new DateTime(1998, 08, 19), "123D456");
             Racun racun1 = new Racun(100);
-            //Ovdje greska - kako blokirati racun
-            Racun racun2 = new Racun(0.0);
-            racun2.Blokiran = true;
+            Racun racun2 = new Racun(1);
+            racun2.PromijeniStanjeRačuna("BANKAR12345", - 100);
             klijent1.Racuni.Add(racun1);
             klijent1.Racuni.Add(racun2);
 
