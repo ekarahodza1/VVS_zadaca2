@@ -5732,19 +5732,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dzene\\.nuget\\packages\\": {}
+    "C:\\Users\\Korisnik\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dzene\\Source\\Repos\\VVS_zadaca2.5\\Hypo Banka\\Unit Testovi\\Unit Testovi.csproj",
+      "projectUniqueName": "C:\\Users\\Korisnik\\source\\repos\\VVS_zadaca2\\Hypo Banka\\Unit Testovi\\Unit Testovi.csproj",
       "projectName": "Unit Testovi",
-      "projectPath": "C:\\Users\\dzene\\Source\\Repos\\VVS_zadaca2.5\\Hypo Banka\\Unit Testovi\\Unit Testovi.csproj",
-      "packagesPath": "C:\\Users\\dzene\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dzene\\Source\\Repos\\VVS_zadaca2.5\\Hypo Banka\\Unit Testovi\\obj\\",
+      "projectPath": "C:\\Users\\Korisnik\\source\\repos\\VVS_zadaca2\\Hypo Banka\\Unit Testovi\\Unit Testovi.csproj",
+      "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Korisnik\\source\\repos\\VVS_zadaca2\\Hypo Banka\\Unit Testovi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dzene\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5757,8 +5757,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\dzene\\Source\\Repos\\VVS_zadaca2.5\\Hypo Banka\\Hypo Banka\\Hypo Banka.csproj": {
-              "projectPath": "C:\\Users\\dzene\\Source\\Repos\\VVS_zadaca2.5\\Hypo Banka\\Hypo Banka\\Hypo Banka.csproj"
+            "C:\\Users\\Korisnik\\source\\repos\\VVS_zadaca2\\Hypo Banka\\Hypo Banka\\Hypo Banka.csproj": {
+              "projectPath": "C:\\Users\\Korisnik\\source\\repos\\VVS_zadaca2\\Hypo Banka\\Hypo Banka\\Hypo Banka.csproj"
             }
           }
         }

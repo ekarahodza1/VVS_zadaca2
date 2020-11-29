@@ -96,9 +96,21 @@ namespace Hypo_Banka
             else return iznosNovca;
         }
 
+        //Esma
         public bool SkiniIznosSaNekogOdRačuna(double ukupniIznos)
         {
-            throw new NotImplementedException();
+            if (racuni.Count == 0) return false;
+            int i = 0;
+            while(i < racuni.Count)
+            {
+                if (!racuni[i].Blokiran)
+                {
+                    racuni[i].PromijeniStanjeRačuna("BANKAR12345", -ukupniIznos);
+                    return true;
+                }
+                i++;
+            }
+            throw new InvalidOperationException("Svi racuni su blokirani");
         }
 
         #endregion
