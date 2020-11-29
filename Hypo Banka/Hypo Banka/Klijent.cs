@@ -77,9 +77,23 @@ namespace Hypo_Banka
         /// slučaju da su svi njegovi računi blokirani.
         /// </summary>
         /// <param name="r"></param>
+        
+        //Dzeneta
         public double DajUkupanIznosNovcaNaSvimRačunima()
         {
-            throw new NotImplementedException();
+            if (racuni.Count == 0 || racuni==null) throw new InvalidOperationException("Klijent nema nijedan račun!");
+            bool sviRacuniBlokirani = true;
+            double iznosNovca = 0;
+            foreach (Racun r in racuni)
+            {
+                if(!r.Blokiran)
+                {
+                    iznosNovca += r.StanjeRacuna;
+                    sviRacuniBlokirani = false;
+                }
+            }
+            if (sviRacuniBlokirani) throw new InvalidOperationException("Svi računi blokirani");
+            else return iznosNovca;
         }
 
         public bool SkiniIznosSaNekogOdRačuna(double ukupniIznos)

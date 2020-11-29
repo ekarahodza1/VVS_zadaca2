@@ -12,6 +12,9 @@ namespace Unit_Testovi
         [TestMethod]
         public void TestZamjenskiObjekat()
         {
+
+
+
             Banka b = new Banka();
             Klijent k = new Klijent();
             Racun r = new Racun(100);

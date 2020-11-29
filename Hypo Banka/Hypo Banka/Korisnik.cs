@@ -106,9 +106,20 @@ namespace Hypo_Banka
         /// Password se generiše prema dozvoljenom formatu podataka iz settera po želji.
         /// Korisničko ime i hashirani password vraćaju se kao rezultat metode.
         /// </summary>
+        
+        /// Dženana, Esma
         public Tuple<string, string> AutomatskoGenerisanjePodataka()
         {
-            throw new NotImplementedException();
+            if (Ime == null || Prezime == null) throw new Exception("Ime ili prezime korisnika nisu postavljeni");
+            string korisnickoIme = Ime.Substring(0, 1).ToLower() + Prezime.ToLower() + "1";
+            Random random = new Random();
+            string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuwxyz0123456789";
+            string password = new string(Enumerable.Repeat(chars, 20).Select(s => s[random.Next(s.Length)]).ToArray());
+            password += "#";
+            Lozinka = password;
+            KorisnickoIme = korisnickoIme;
+            Tuple<string, string> tuple = new Tuple<string, string>(korisnickoIme, password);
+            return tuple;
         }
 
         #endregion
