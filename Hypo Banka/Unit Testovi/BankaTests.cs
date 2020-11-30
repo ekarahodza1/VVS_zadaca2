@@ -9,22 +9,86 @@ namespace Unit_Testovi
     [TestClass()]
     public class BankaTests
     {
+
+        //Dženana
         [TestMethod()]
-        public void BankaTest()
+        public void RadSaKlijentomTestDodavanjeKlijenata()
         {
-            Assert.Fail();
+            Klijent klijent1 = new Klijent();
+            Klijent klijent2 = new Klijent();
+            Banka banka = new Banka();
+
+            banka.RadSaKlijentom(klijent1, 0, new List<string>());
+            banka.RadSaKlijentom(klijent2, 0, new List<string>());
+
+            Assert.AreEqual(2, banka.Klijenti.Count);
         }
 
+        //Dženana
         [TestMethod()]
-        public void RadSaKlijentomTest()
+        public void RadSaKlijentomTestBrisanjeKlijenata()
         {
-            Assert.Fail();
+            Klijent klijent1 = new Klijent();
+            Klijent klijent2 = new Klijent();
+            Banka banka = new Banka();
+
+            banka.RadSaKlijentom(klijent1, 0, new List<string>());
+            banka.RadSaKlijentom(klijent2, 0, new List<string>());
+
+            banka.RadSaKlijentom(klijent1, 2, new List<string>());
+
+            Assert.AreEqual(1, banka.Klijenti.Count);
         }
 
+        //Dženana
+        [TestMethod()]
+        public void RadSaKlijentomTestAutomatskoGenerisanje()
+        {
+            Klijent klijent = new Klijent("Dženana", "Huseinspahić", "nekoime", "lozinka12345678912312#", DateTime.Parse("1.1.2000."), "123A456");
+            Banka banka = new Banka();
+
+            banka.RadSaKlijentom(klijent, 0, new List<string>());
+            banka.RadSaKlijentom(klijent, 1, new List<string>());
+
+            StringAssert.Matches(banka.Klijenti[0].KorisnickoIme, new System.Text.RegularExpressions.Regex(@"(?:^|\W)dhuseinspahić1(?:$|\W)"));
+        }
+
+        //Dženana
+        [TestMethod(), ExpectedException(typeof(ArgumentNullException))]
+        public void OtvaranjeNovogRačunaTestKlijentNijeRegistrovan()
+        {
+            Klijent klijent = new Klijent("Dženana", "Huseinspahić", "nekoime", "lozinka12345678912312#", DateTime.Parse("1.1.2000."), "123A456");
+            Banka banka = new Banka();
+            banka.OtvaranjeNovogRačuna(klijent, new Racun(100));
+        }
+
+        //Dženana
+        [TestMethod(), ExpectedException(typeof(InvalidOperationException))]
+        public void OtvaranjeNovogRačunaTestVišeOd3Računa()
+        {
+            Klijent klijent = new Klijent("Dženana", "Huseinspahić", "nekoime", "lozinka12345678912312#", DateTime.Parse("1.1.2000."), "123A456");
+            Banka banka = new Banka();
+
+            banka.RadSaKlijentom(klijent, 0, new List<string>());
+            klijent.Racuni.Add(new Racun(100));
+            klijent.Racuni.Add(new Racun(200));
+            klijent.Racuni.Add(new Racun(300));
+            
+            banka.OtvaranjeNovogRačuna(klijent, new Racun(100));
+        }
+
+        //Dženana
         [TestMethod()]
         public void OtvaranjeNovogRačunaTest()
         {
-            Assert.Fail();
+            Klijent klijent = new Klijent("Dženana", "Huseinspahić", "nekoime", "lozinka12345678912312#", DateTime.Parse("1.1.2000."), "123A456");
+            Banka banka = new Banka();
+
+            banka.RadSaKlijentom(klijent, 0, new List<string>());
+            banka.OtvaranjeNovogRačuna(klijent, new Racun(100));
+            banka.OtvaranjeNovogRačuna(klijent, new Racun(100));
+
+            Assert.AreEqual(2, banka.Klijenti[0].Racuni.Count);
         }
 
         //Dzeneta
@@ -103,10 +167,43 @@ namespace Unit_Testovi
             banka.KlijentiSBlokiranimRačunima();
         }
 
+        //Dženana
         [TestMethod()]
         public void DajKreditTest()
         {
-            Assert.Fail();
+            Banka banka = new Banka();
+            Klijent klijent = new Klijent("Dženana", "Huseinspahić", "nekoime", "lozinka12345678912312#", new DateTime(1998, 12, 26), "123A456");
+            banka.RadSaKlijentom(klijent, 0, new List<string>());
+            Kredit kredit = new Kredit(klijent, 10000, 100, 0.05, new DateTime(2021, 12, 30));
+            
+            banka.DajKredit(kredit);
+
+            Assert.IsNotNull(banka.Krediti);
+        }
+
+        //Dženana
+        [TestMethod(), ExpectedException(typeof(InvalidOperationException))]
+        public void DajKreditTestKlijentNijeUBanci()
+        {
+            Banka banka = new Banka();
+            Klijent klijent = new Klijent();
+            Kredit kredit = new Kredit(klijent, 10000, 100, 0.05, new DateTime(2021, 12, 30));
+
+            banka.DajKredit(kredit);
+        }
+
+        //Dženana
+        [TestMethod(), ExpectedException(typeof(InvalidOperationException))]
+        public void DajKreditTestPremašenBrojKredita()
+        {
+            Banka banka = new Banka();
+            Klijent klijent = new Klijent();
+            Kredit kredit = new Kredit(klijent, 10000, 100, 0.05, new DateTime(2021, 12, 30));
+            for (int i = 0; i <= 100; i++)
+            {
+                banka.RadSaKlijentom(klijent, 0, new List<string>());
+                banka.DajKredit(kredit);
+            }
         }
 
         [TestMethod()]

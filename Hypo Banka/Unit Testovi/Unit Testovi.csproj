@@ -18,4 +18,13 @@
     <ProjectReference Include="..\Hypo Banka\Hypo Banka.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="KorisnikIspravno.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="KorisnikNeispravno.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
