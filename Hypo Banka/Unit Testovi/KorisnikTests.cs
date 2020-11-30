@@ -4,12 +4,39 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace Unit_Testovi
 {
     [TestClass()]
     public class KorisnikTests
     {
+        private TestContext testContextInstance;
+        public TestContext TestContext {
+            get
+            {
+                return testContextInstance;
+            }
+            set
+            {
+                testContextInstance = value;
+            } 
+        }
+
+        [TestMethod()]
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",
+            "|DataDirectory|\\KorisnikIspravno.csv", "KorisnikIspravno#csv", DataAccessMethod.Sequential),
+            DeploymentItem("KorisnikIspravno.csv")]
+        public void KorisnikTest()
+        {
+           /* string ime = Convert.ToString(TestContext.DataRow["Ime"]);
+            string prezime = Convert.ToString(TestContext.DataRow["Prezime"]);
+            string korisnickoIme = Convert.ToString(TestContext.DataRow["KorisnickoIme"]);
+            string lozinka = Convert.ToString(TestContext.DataRow["Lozinka"]);
+
+            Korisnik korisnik = new Korisnik(ime, prezime, korisnickoIme, lozinka);*/
+
+        }
 
         //Esma
         [TestMethod()]
