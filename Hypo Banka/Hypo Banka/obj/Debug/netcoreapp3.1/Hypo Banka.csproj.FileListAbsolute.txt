@@ -61,3 +61,12 @@ C:\Users\dzene\Source\Repos\VVS_zadaca2.5\Hypo Banka\Hypo Banka\obj\Debug\netcor
 C:\Users\dzene\Source\Repos\VVS_zadaca2.5\Hypo Banka\Hypo Banka\obj\Debug\netcoreapp3.1\Hypo Banka.AssemblyInfo.cs
 C:\Users\dzene\Source\Repos\VVS_zadaca2.5\Hypo Banka\Hypo Banka\obj\Debug\netcoreapp3.1\Hypo Banka.dll
 C:\Users\dzene\Source\Repos\VVS_zadaca2.5\Hypo Banka\Hypo Banka\obj\Debug\netcoreapp3.1\Hypo Banka.pdb
+C:\Users\Korisnik\Source\Repos\VVS_zadaca2novinovi\Hypo Banka\Hypo Banka\bin\Debug\netcoreapp3.1\Hypo Banka.deps.json
+C:\Users\Korisnik\Source\Repos\VVS_zadaca2novinovi\Hypo Banka\Hypo Banka\bin\Debug\netcoreapp3.1\Hypo Banka.dll
+C:\Users\Korisnik\Source\Repos\VVS_zadaca2novinovi\Hypo Banka\Hypo Banka\bin\Debug\netcoreapp3.1\Hypo Banka.pdb
+C:\Users\Korisnik\Source\Repos\VVS_zadaca2novinovi\Hypo Banka\Hypo Banka\obj\Debug\netcoreapp3.1\Hypo Banka.csprojAssemblyReference.cache
+C:\Users\Korisnik\Source\Repos\VVS_zadaca2novinovi\Hypo Banka\Hypo Banka\obj\Debug\netcoreapp3.1\Hypo Banka.csproj.CoreCompileInputs.cache
+C:\Users\Korisnik\Source\Repos\VVS_zadaca2novinovi\Hypo Banka\Hypo Banka\obj\Debug\netcoreapp3.1\Hypo Banka.AssemblyInfoInputs.cache
+C:\Users\Korisnik\Source\Repos\VVS_zadaca2novinovi\Hypo Banka\Hypo Banka\obj\Debug\netcoreapp3.1\Hypo Banka.AssemblyInfo.cs
+C:\Users\Korisnik\Source\Repos\VVS_zadaca2novinovi\Hypo Banka\Hypo Banka\obj\Debug\netcoreapp3.1\Hypo Banka.dll
+C:\Users\Korisnik\Source\Repos\VVS_zadaca2novinovi\Hypo Banka\Hypo Banka\obj\Debug\netcoreapp3.1\Hypo Banka.pdb

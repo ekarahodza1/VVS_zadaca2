@@ -11,41 +11,81 @@ namespace Unit_Testovi
     [TestClass()]
     public class KorisnikTests
     {
-        private TestContext testContextInstance;
-        public TestContext TestContext {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            } 
+        /*private TestContext testContextInstance;
+
+        public TestContext TestContextInstance {
+            get{return testContextInstance;}
+            set{testContextInstance = value;} 
         }
 
         [TestMethod()]
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",
-            "|DataDirectory|\\KorisnikIspravno.csv", "KorisnikIspravno#csv", DataAccessMethod.Sequential),
-            DeploymentItem("KorisnikIspravno.csv")]
+              @".\KorisnikIspravno.csv", "KorisnikIspravno#csv", DataAccessMethod.Sequential)]
         public void KorisnikTest()
         {
-           /* string ime = Convert.ToString(TestContext.DataRow["Ime"]);
-            string prezime = Convert.ToString(TestContext.DataRow["Prezime"]);
-            string korisnickoIme = Convert.ToString(TestContext.DataRow["KorisnickoIme"]);
-            string lozinka = Convert.ToString(TestContext.DataRow["Lozinka"]);
+            string ime = Convert.ToString(TestContext.DataRow["Ime"]);
+            string prezime = Convert.ToString(TestContextInstance.DataRow["Prezime"]);
+            string korisnickoIme = Convert.ToString(TestContextInstance.DataRow["KorisnickoIme"]);
+            string lozinka = Convert.ToString(TestContextInstance.DataRow["Lozinka"]);
 
-            Korisnik korisnik = new Korisnik(ime, prezime, korisnickoIme, lozinka);*/
+            Korisnik korisnik = new Klijent(ime, prezime, korisnickoIme, lozinka, new DateTime(1999, 05, 05), "123D456");
+        }*/
 
+        static IEnumerable<object[]> KorisnikIspravno
+        {
+            get
+            {
+                return new[]
+                {
+                    new object[] { "Esma", "Karahodza", "ekarahodza1", "lozinka123456aadfaa!", new DateTime(1999, 01, 10), "123D456" },
+                    new object[] { "Ime", "Prezime", "neko1", "lozinka123456aaaaaa!", new DateTime(1999, 01, 10), "123D456" }
+                  
+                };
+            }
+        }
+
+        //Esma
+        [TestMethod()]
+        [DynamicData("KorisnikIspravno")]
+        public void ValidacijaKorisnikIspravno(string ime, string prezime, string korisnickoIme, string lozinka, DateTime datum, string licna)
+        {
+            Korisnik korisnik = new Klijent(ime, prezime, korisnickoIme, lozinka, new DateTime(), licna);
+            byte[] data = System.Text.Encoding.ASCII.GetBytes(lozinka);
+            data = new System.Security.Cryptography.SHA256Managed().ComputeHash(data);
+            string lozinkaHash = System.Text.Encoding.ASCII.GetString(data);
+            Assert.AreEqual(lozinkaHash, korisnik.Lozinka);
+        }
+
+        static IEnumerable<object[]> KorisnikNeispravno
+        {
+            get
+            {
+                return new[]
+                {
+                    new object[] { null, "Karahodza", "ekarahodza1", "lozinka123456aadfaa!", new DateTime(1999, 05, 05), "123D456" },
+                    new object[] { "Esma", null, "ekarahodza1", "lozinka123456aadfaa!", new DateTime(1999, 05, 05), "123D456" },
+                    new object[] { "Esma", "Karahodza", null, "lozinka123456aadfaa!", new DateTime(1999, 05, 05), "123D456" },
+                    new object[] { "Esma", "Karahodza", "ekarahodza1", null, new DateTime(1999, 05, 05), "123D456" },
+                    new object[] { "Esma", "Karahodza", "ekarahodza1", "lozinka123456aadfaa!", new DateTime(1999, 05, 05), null },
+                    new object[] { "a", "Karahodza", "ekarahodza1", "lozinka123456aadfaa!#", new DateTime(1999, 05, 05), "123D456" },
+                    new object[] { "Esma", "karahodza", "ekarahodza1", "lozinka123456aadfaa!#", new DateTime(1999, 05, 05), "123D456" },
+                    new object[] { "Esma", "Karahodza", "ekarahodza1", "lozinka", new DateTime(1999, 05, 05), "123D456" },
+                    new object[] { "Esma", "Karahodza", "ekarahodza1", "lozinka123456aadfaa!#", new DateTime(1999, 05, 05), "1230456" }
+
+                };
+            }
         }
 
         //Esma
         [TestMethod()]
         [ExpectedException(typeof(ArgumentException))]
-        public void AutomatskoGenerisanjePodatakaTest1()
+        [DynamicData("KorisnikNeispravno")]
+        public void ValidacijaKorisnikNeispravno(string ime, string prezime, string korisnickoIme, string lozinka, DateTime datum, string licna)
         {
-            Korisnik korisnik = new Klijent(null, null, null, null, new DateTime(), null);
-            korisnik.AutomatskoGenerisanjePodataka();
+            Korisnik korisnik = new Klijent(ime, prezime, korisnickoIme, lozinka, new DateTime(), licna);
         }
+
+        
 
         //Dzeneta
         [TestMethod()]

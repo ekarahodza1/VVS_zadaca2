@@ -33,7 +33,7 @@ namespace Unit_Testovi
             klijent.Racuni.Add(racun4);
             
             Assert.AreEqual(11000, klijent.DajUkupanIznosNovcaNaSvimRačunima());
-        } 
+        }
 
         //Dženana
         [TestMethod(), ExpectedException(typeof(InvalidOperationException))]
@@ -54,5 +54,17 @@ namespace Unit_Testovi
 
             klijent.DajUkupanIznosNovcaNaSvimRačunima();
         }
+
+        //Esma
+        [TestMethod()]
+        public void TestSkidanjaIznosaSRačunaPrazan()
+        {
+            Banka b = new Banka();
+            Klijent k = new Klijent();
+
+            Assert.IsFalse(k.SkiniIznosSaNekogOdRačuna(1000));
+        }
+
     }
+
 }

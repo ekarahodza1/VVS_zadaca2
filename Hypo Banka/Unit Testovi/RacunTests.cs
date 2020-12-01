@@ -9,10 +9,12 @@ namespace Unit_Testovi
     [TestClass()]
     public class RacunTests
     {
+        //Esma
         [TestMethod()]
         public void RacunTest()
         {
-            Assert.Fail();
+            Racun racun = new Racun(100);
+            Assert.IsFalse(racun.Blokiran);
         }
 
         //Dženana
