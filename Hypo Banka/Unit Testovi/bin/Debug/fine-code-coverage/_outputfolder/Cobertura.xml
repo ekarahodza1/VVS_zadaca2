@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.9510603588907015" branch-rate="0.9396551724137931" lines-covered="583" lines-valid="613" branches-covered="109" branches-valid="116" complexity="194" version="0" timestamp="1606936213">
+<coverage line-rate="0.9510603588907015" branch-rate="0.9396551724137931" lines-covered="583" lines-valid="613" branches-covered="109" branches-valid="116" complexity="194" version="0" timestamp="1606937280">
   <sources>
-    <source>C:\Users\dzene\</source>
+    <source>C:\Users\HP\</source>
   </sources>
   <packages>
     <package name="Hypo Banka" line-rate="0.9621848739495799" branch-rate="0.9473684210526315" complexity="145">
       <classes>
-        <class name="Hypo_Banka.Banka" filename="C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Hypo Banka\Banka.cs" line-rate="0.9298245614035088" branch-rate="0.9615384615384616" complexity="29">
+        <class name="Hypo_Banka.Banka" filename="C:\Users\HP\Source\Repos\ekarahodza1\VVS_zadaca2\Hypo Banka\Hypo Banka\Banka.cs" line-rate="0.9298245614035088" branch-rate="0.9615384615384616" complexity="29">
           <methods>
             <method name="get_Klijenti" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -159,7 +159,7 @@
             <line number="116" hits="2" branch="false" />
           </lines>
         </class>
-        <class name="Hypo_Banka.Klijent" filename="C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Hypo Banka\Klijent.cs" line-rate="0.9642857142857143" branch-rate="0.9333333333333333" complexity="35">
+        <class name="Hypo_Banka.Klijent" filename="C:\Users\HP\Source\Repos\ekarahodza1\VVS_zadaca2\Hypo Banka\Hypo Banka\Klijent.cs" line-rate="0.9642857142857143" branch-rate="0.9333333333333333" complexity="35">
           <methods>
             <method name="get_DatumRodenja" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -313,7 +313,7 @@
             <line number="114" hits="3" branch="false" />
           </lines>
         </class>
-        <class name="Hypo_Banka.Korisnik" filename="C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Hypo Banka\Korisnik.cs" line-rate="0.9649122807017544" branch-rate="0.9375" complexity="40">
+        <class name="Hypo_Banka.Korisnik" filename="C:\Users\HP\Source\Repos\ekarahodza1\VVS_zadaca2\Hypo Banka\Hypo Banka\Korisnik.cs" line-rate="0.9649122807017544" branch-rate="0.9375" complexity="40">
           <methods>
             <method name="get_Id" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -485,7 +485,7 @@
             <line number="123" hits="6" branch="false" />
           </lines>
         </class>
-        <class name="Hypo_Banka.Kredit" filename="C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Hypo Banka\Kredit.cs" line-rate="1" branch-rate="0.9375" complexity="24">
+        <class name="Hypo_Banka.Kredit" filename="C:\Users\HP\Source\Repos\ekarahodza1\VVS_zadaca2\Hypo Banka\Hypo Banka\Kredit.cs" line-rate="1" branch-rate="0.9375" complexity="24">
           <methods>
             <method name="get_Klijent" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -619,7 +619,7 @@
             <line number="107" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Hypo_Banka.Racun" filename="C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Hypo Banka\Racun.cs" line-rate="0.9565217391304348" branch-rate="1" complexity="15">
+        <class name="Hypo_Banka.Racun" filename="C:\Users\HP\Source\Repos\ekarahodza1\VVS_zadaca2\Hypo Banka\Hypo Banka\Racun.cs" line-rate="0.9565217391304348" branch-rate="1" complexity="15">
           <methods>
             <method name="get_BrojRacuna" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -638,22 +638,22 @@
             </method>
             <method name="set_Blokiran" signature="(...)" line-rate="1" branch-rate="1" complexity="8">
               <lines>
-                <line number="32" hits="50" branch="false" />
-                <line number="33" hits="50" branch="true" condition-coverage="100% (4/4)" />
+                <line number="32" hits="51" branch="false" />
+                <line number="33" hits="51" branch="true" condition-coverage="100% (4/4)" />
                 <line number="34" hits="3" branch="false" />
-                <line number="35" hits="47" branch="true" condition-coverage="100% (4/4)" />
-                <line number="36" hits="4" branch="false" />
-                <line number="38" hits="43" branch="false" />
-                <line number="39" hits="43" branch="false" />
+                <line number="35" hits="48" branch="true" condition-coverage="100% (4/4)" />
+                <line number="36" hits="3" branch="false" />
+                <line number="38" hits="45" branch="false" />
+                <line number="39" hits="45" branch="false" />
               </lines>
             </method>
             <method name="PromijeniStanjeRačuna" signature="(...)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="59" hits="12" branch="false" />
-                <line number="60" hits="12" branch="true" condition-coverage="100% (2/2)" />
-                <line number="61" hits="11" branch="false" />
+                <line number="59" hits="13" branch="false" />
+                <line number="60" hits="13" branch="true" condition-coverage="100% (2/2)" />
+                <line number="61" hits="12" branch="false" />
                 <line number="63" hits="1" branch="false" />
-                <line number="64" hits="11" branch="false" />
+                <line number="64" hits="12" branch="false" />
               </lines>
             </method>
             <method name=".ctor" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
@@ -664,7 +664,7 @@
                 <line number="49" hits="39" branch="false" />
                 <line number="50" hits="39" branch="false" />
                 <line number="51" hits="39" branch="false" />
-                <line number="52" hits="35" branch="false" />
+                <line number="52" hits="36" branch="false" />
               </lines>
             </method>
             <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -678,28 +678,28 @@
             <line number="22" hits="0" branch="false" />
             <line number="26" hits="15" branch="false" />
             <line number="30" hits="20" branch="false" />
-            <line number="32" hits="50" branch="false" />
-            <line number="33" hits="50" branch="true" condition-coverage="100% (4/4)" />
+            <line number="32" hits="51" branch="false" />
+            <line number="33" hits="51" branch="true" condition-coverage="100% (4/4)" />
             <line number="34" hits="3" branch="false" />
-            <line number="35" hits="47" branch="true" condition-coverage="100% (4/4)" />
-            <line number="36" hits="4" branch="false" />
-            <line number="38" hits="43" branch="false" />
-            <line number="39" hits="43" branch="false" />
+            <line number="35" hits="48" branch="true" condition-coverage="100% (4/4)" />
+            <line number="36" hits="3" branch="false" />
+            <line number="38" hits="45" branch="false" />
+            <line number="39" hits="45" branch="false" />
             <line number="46" hits="39" branch="false" />
             <line number="47" hits="39" branch="false" />
             <line number="48" hits="39" branch="false" />
             <line number="49" hits="39" branch="false" />
             <line number="50" hits="39" branch="false" />
             <line number="51" hits="39" branch="false" />
-            <line number="52" hits="35" branch="false" />
-            <line number="59" hits="12" branch="false" />
-            <line number="60" hits="12" branch="true" condition-coverage="100% (2/2)" />
-            <line number="61" hits="11" branch="false" />
+            <line number="52" hits="36" branch="false" />
+            <line number="59" hits="13" branch="false" />
+            <line number="60" hits="13" branch="true" condition-coverage="100% (2/2)" />
+            <line number="61" hits="12" branch="false" />
             <line number="63" hits="1" branch="false" />
-            <line number="64" hits="11" branch="false" />
+            <line number="64" hits="12" branch="false" />
           </lines>
         </class>
-        <class name="Hypo_Banka.StubZahtjev" filename="C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Hypo Banka\StubZahtjev.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="Hypo_Banka.StubZahtjev" filename="C:\Users\HP\Source\Repos\ekarahodza1\VVS_zadaca2\Hypo Banka\Hypo Banka\StubZahtjev.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="DaLiJePovoljan" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -715,7 +715,7 @@
             <line number="13" hits="2" branch="false" />
           </lines>
         </class>
-        <class name="Hypo_Banka.Zahtjev" filename="C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Hypo Banka\Zahtjev.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="Hypo_Banka.Zahtjev" filename="C:\Users\HP\Source\Repos\ekarahodza1\VVS_zadaca2\Hypo Banka\Hypo Banka\Zahtjev.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="DaLiJePovoljan" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -733,7 +733,7 @@
     </package>
     <package name="Unit Testovi" line-rate="0.944" branch-rate="0.5" complexity="49">
       <classes>
-        <class name="AutoGeneratedProgram" filename="C:\Users\dzene\.nuget\packages\microsoft.net.test.sdk\16.5.0\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="AutoGeneratedProgram" filename="C:\Users\HP\.nuget\packages\microsoft.net.test.sdk\16.5.0\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="Main" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -745,7 +745,7 @@
             <line number="4" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Unit_Testovi.BankaTests" filename="C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Unit Testovi\BankaTests.cs" line-rate="0.9435483870967742" branch-rate="0.5" complexity="15">
+        <class name="Unit_Testovi.BankaTests" filename="C:\Users\HP\Source\Repos\ekarahodza1\VVS_zadaca2\Hypo Banka\Unit Testovi\BankaTests.cs" line-rate="0.9435483870967742" branch-rate="0.5" complexity="15">
           <methods>
             <method name="RadSaKlijentomTestDodavanjeKlijenata" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1055,7 +1055,7 @@
             <line number="217" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Unit_Testovi.KlijentTests" filename="C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Unit Testovi\KlijentTests.cs" line-rate="0.9393939393939394" branch-rate="1" complexity="4">
+        <class name="Unit_Testovi.KlijentTests" filename="C:\Users\HP\Source\Repos\ekarahodza1\VVS_zadaca2\Hypo Banka\Unit Testovi\KlijentTests.cs" line-rate="0.9393939393939394" branch-rate="1" complexity="4">
           <methods>
             <method name="DajUkupanIznosNovcaNaSvimRačunimaTestNemaNijedanRacun" signature="()" line-rate="0.75" branch-rate="1" complexity="1">
               <lines>
@@ -1143,7 +1143,7 @@
             <line number="66" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Unit_Testovi.KorisnikTests" filename="C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Unit Testovi\KorisnikTests.cs" line-rate="0.9411764705882353" branch-rate="1" complexity="7">
+        <class name="Unit_Testovi.KorisnikTests" filename="C:\Users\HP\Source\Repos\ekarahodza1\VVS_zadaca2\Hypo Banka\Unit Testovi\KorisnikTests.cs" line-rate="0.9411764705882353" branch-rate="1" complexity="7">
           <methods>
             <method name="get_KorisnikIspravno" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1279,7 +1279,7 @@
             <line number="99" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Unit_Testovi.KreditTest" filename="C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Unit Testovi\KreditTest.cs" line-rate="0.9692307692307692" branch-rate="1" complexity="8">
+        <class name="Unit_Testovi.KreditTest" filename="C:\Users\HP\Source\Repos\ekarahodza1\VVS_zadaca2\Hypo Banka\Unit Testovi\KreditTest.cs" line-rate="0.9692307692307692" branch-rate="1" complexity="8">
           <methods>
             <method name="ProvjeriStanjeOtplateTest" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1447,7 +1447,7 @@
             <line number="114" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="Unit_Testovi.NoviTestovi" filename="C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Unit Testovi\NoviTestovi.cs" line-rate="0.9787234042553191" branch-rate="1" complexity="4">
+        <class name="Unit_Testovi.NoviTestovi" filename="C:\Users\HP\Source\Repos\ekarahodza1\VVS_zadaca2\Hypo Banka\Unit Testovi\NoviTestovi.cs" line-rate="0.9787234042553191" branch-rate="1" complexity="4">
           <methods>
             <method name="TestZamjenskiObjekat" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1563,7 +1563,7 @@
             <line number="87" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="Unit_Testovi.RacunTests" filename="C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Unit Testovi\RacunTests.cs" line-rate="0.92" branch-rate="1" complexity="9">
+        <class name="Unit_Testovi.RacunTests" filename="C:\Users\HP\Source\Repos\ekarahodza1\VVS_zadaca2\Hypo Banka\Unit Testovi\RacunTests.cs" line-rate="0.92" branch-rate="1" complexity="9">
           <methods>
             <method name="RacunTest" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -1646,9 +1646,9 @@
               <lines>
                 <line number="104" hits="3" branch="false" />
                 <line number="105" hits="3" branch="false" />
-                <line number="106" hits="2" branch="false" />
-                <line number="107" hits="2" branch="false" />
-                <line number="108" hits="2" branch="false" />
+                <line number="106" hits="3" branch="false" />
+                <line number="107" hits="3" branch="false" />
+                <line number="108" hits="3" branch="false" />
               </lines>
             </method>
           </methods>
@@ -1700,12 +1700,12 @@
             <line number="98" hits="1" branch="false" />
             <line number="104" hits="3" branch="false" />
             <line number="105" hits="3" branch="false" />
-            <line number="106" hits="2" branch="false" />
-            <line number="107" hits="2" branch="false" />
-            <line number="108" hits="2" branch="false" />
+            <line number="106" hits="3" branch="false" />
+            <line number="107" hits="3" branch="false" />
+            <line number="108" hits="3" branch="false" />
           </lines>
         </class>
-        <class name="Unit_Testovi.ZahtjevTests" filename="C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Unit Testovi\ZahtjevTests.cs" line-rate="0.75" branch-rate="1" complexity="1">
+        <class name="Unit_Testovi.ZahtjevTests" filename="C:\Users\HP\Source\Repos\ekarahodza1\VVS_zadaca2\Hypo Banka\Unit Testovi\ZahtjevTests.cs" line-rate="0.75" branch-rate="1" complexity="1">
           <methods>
             <method name="DaLiJePovoljanNijeImplementiranTest" signature="()" line-rate="0.75" branch-rate="1" complexity="1">
               <lines>

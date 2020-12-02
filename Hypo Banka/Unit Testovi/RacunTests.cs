@@ -92,7 +92,7 @@ namespace Unit_Testovi
                 return new[]
                 {
                     new object[] {1},
-                    new object[] {0},
+                    new object[] {5},
                     new object[] {10}
                 };
             }
