@@ -110,7 +110,7 @@ namespace Hypo_Banka
         /// Dženana, Esma
         public Tuple<string, string> AutomatskoGenerisanjePodataka()
         {
-            if (Ime == null || Prezime == null) throw new Exception("Ime ili prezime korisnika nisu postavljeni");
+            if (Ime == null || Prezime == null) throw new Exception("Ime ili prezime korisnika nisu postavljeni"); //ne moze se doci do ovog izuzetka 
             string korisnickoIme = Ime.Substring(0, 1).ToLower() + Prezime.ToLower() + "1";
             Random random = new Random();
             string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuwxyz0123456789";

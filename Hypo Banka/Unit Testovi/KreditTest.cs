@@ -26,7 +26,7 @@ namespace Unit_Testovi
                 return new[]
                 {
                     new object[] {new Klijent("Dzeneta", "Kudumovic", "dkudumovic1", "123456789123456789P?", new DateTime(1998, 08, 19), "123D456"),
-                        10000,500,0.01,new DateTime(2032,01,01)},
+                        10000,500,0.03,new DateTime(2032,01,01)},
                     new object[] {new Klijent("Dzeneta", "Kudumovic", "dkudumovic1", "123456789123456789P?", new DateTime(1998, 08, 19), "123D456"),
                         21333,764,0.12,new DateTime(2019,01,01)},
                     new object[] {new Klijent("Dzeneta", "Kudumovic", "dkudumovic1", "123456789123456789P?", new DateTime(1998, 08, 19), "123D456"),
@@ -54,7 +54,7 @@ namespace Unit_Testovi
                     new object[] {new Klijent("Dzeneta", "Kudumovic", "dkudumovic1", "123456789123456789P?", new DateTime(1998, 08, 19), "123D456"),
                         100001,5000,0.03,new DateTime(2025,01,01)},
                     new object[] {new Klijent("Dzeneta", "Kudumovic", "dkudumovic1", "123456789123456789P?", new DateTime(1998, 08, 19), "123D456"),
-                        151233,-300,0.09,new DateTime(2026,02,07)},
+                        15000,-300,0.09,new DateTime(2026,02,07)},
                     new object[] {new Klijent("Dzeneta", "Kudumovic", "dkudumovic1", "123456789123456789P?", new DateTime(1998, 08, 19), "123D456"),
                         -120000,4001,0.05,new DateTime(2021,01,08)}
 
@@ -76,7 +76,7 @@ namespace Unit_Testovi
             {
                 return new[]
                 {
-                    new object[] {new Klijent("Dzeneta", "Kudumovic", "dkudumovic1", "123456789123456789P?", new DateTime(1998, 08, 19), "123D456"),
+                    new object[] {new Klijent("Dženana", "Huseinspahić", "dzhuseinspahic", "lozinka12345678912312#", new DateTime(2000,01,01), "123A456"),
                         90000,500,0.03,new DateTime(2025,01,01)},
                     new object[] {new Klijent("Dzeneta", "Kudumovic", "dkudumovic1", "123456789123456789P?", new DateTime(1998, 08, 19), "123D456"),
                         2000,200,0.09,new DateTime(2026,03,01)},

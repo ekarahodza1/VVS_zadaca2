@@ -50,6 +50,17 @@ namespace Unit_Testovi
         }
 
 
+
+        //Dženeta
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException))]
+        [DynamicData("RacuniPocetnoStanjeVeceOdNula")]
+        public void RacunBlokiranjeNijeDozvoljeno1(double pocetnoStanje)
+        {
+            Racun racun = new Racun(pocetnoStanje);
+            racun.Blokiran = true;
+        }
+
         static IEnumerable<object[]> RacuniPocetnoStanjeManjeOdGranice
         {
             get
@@ -66,16 +77,6 @@ namespace Unit_Testovi
         //Dženeta
         [TestMethod()]
         [ExpectedException(typeof(ArgumentException))]
-        [DynamicData("RacuniPocetnoStanjeVeceOdNula")]
-        public void RacunBlokiranjeNijeDozvoljeno1(double pocetnoStanje)
-        {
-            Racun racun = new Racun(pocetnoStanje);
-            racun.Blokiran = true;
-        }
-
-        //Dženeta
-        [TestMethod()]
-        [ExpectedException(typeof(ArgumentException))]
         [DynamicData("RacuniPocetnoStanjeManjeOdGranice")]
         public void RacunBlokiranjeNijeDozvoljeno2(double pocetnoStanje)
         {
@@ -83,13 +84,26 @@ namespace Unit_Testovi
             racun.Blokiran = false;
         }
 
+
+        static IEnumerable<object[]> RacuniPocetnoStanjeIspravno
+        {
+            get
+            {
+                return new[]
+                {
+                    new object[] {1},
+                    new object[] {0},
+                    new object[] {10}
+                };
+            }
+        }
         //Dženeta
         [TestMethod()]
-        [ExpectedException(typeof(ArgumentException))]
-        [DynamicData("RacuniPocetnoStanjeVeceOdNula")]
+        [DynamicData("RacuniPocetnoStanjeIspravno")]
         public void RacunBlokiranjeDozvoljeno(double pocetnoStanje)
         {
             Racun racun = new Racun(pocetnoStanje);
+            racun.PromijeniStanjeRačuna("BANKAR12345", -1000000);
             racun.Blokiran = true;
         }
 
