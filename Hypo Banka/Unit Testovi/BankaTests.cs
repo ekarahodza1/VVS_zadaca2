@@ -209,7 +209,11 @@ namespace Unit_Testovi
         [TestMethod()]
         public void OdobriKreditTest()
         {
-            Assert.Fail();
+            Banka banka = new Banka();
+            IZahtjev zahtjev= new StubZahtjev();
+            Kredit kredit = new Kredit(new Klijent("Dzeneta", "Kudumovic", "dkudumovic1", "123456789123456789P?", new DateTime(1998, 08, 19), "123D456"),
+                        90000, 500, 0.03, new DateTime(2025, 01, 01));
+            Assert.IsFalse(banka.OdobriKredit(zahtjev, kredit));
         }
     }
 }

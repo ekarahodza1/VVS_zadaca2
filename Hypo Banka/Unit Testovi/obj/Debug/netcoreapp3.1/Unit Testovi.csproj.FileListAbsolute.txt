@@ -773,8 +773,6 @@ C:\Users\Korisnik\Source\Repos\VVS_zadaca2novinovi\Hypo Banka\Unit Testovi\obj\D
 C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Unit Testovi\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Unit Testovi\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Unit Testovi\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Unit Testovi\bin\Debug\netcoreapp3.1\KorisnikIspravno.csv
-C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Unit Testovi\bin\Debug\netcoreapp3.1\KorisnikNeispravno.csv
 C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Unit Testovi\bin\Debug\netcoreapp3.1\Unit Testovi.deps.json
 C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Unit Testovi\bin\Debug\netcoreapp3.1\Unit Testovi.runtimeconfig.json
 C:\Users\dzene\Source\Repos\VVS_zadaca2.6\Hypo Banka\Unit Testovi\bin\Debug\netcoreapp3.1\Unit Testovi.runtimeconfig.dev.json

@@ -11,25 +11,6 @@ namespace Unit_Testovi
     [TestClass()]
     public class KorisnikTests
     {
-        /*private TestContext testContextInstance;
-
-        public TestContext TestContextInstance {
-            get{return testContextInstance;}
-            set{testContextInstance = value;} 
-        }
-
-        [TestMethod()]
-        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",
-              @".\KorisnikIspravno.csv", "KorisnikIspravno#csv", DataAccessMethod.Sequential)]
-        public void KorisnikTest()
-        {
-            string ime = Convert.ToString(TestContext.DataRow["Ime"]);
-            string prezime = Convert.ToString(TestContextInstance.DataRow["Prezime"]);
-            string korisnickoIme = Convert.ToString(TestContextInstance.DataRow["KorisnickoIme"]);
-            string lozinka = Convert.ToString(TestContextInstance.DataRow["Lozinka"]);
-
-            Korisnik korisnik = new Klijent(ime, prezime, korisnickoIme, lozinka, new DateTime(1999, 05, 05), "123D456");
-        }*/
 
         static IEnumerable<object[]> KorisnikIspravno
         {
